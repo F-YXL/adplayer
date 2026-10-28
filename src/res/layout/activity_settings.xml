@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:id="@+id/settings_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingTop="28dp"
+        android:paddingBottom="40dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="播放设置"
+            android:textColor="@color/text_primary"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="22dp"
+            android:text="广告播放器 · 视频图片循环播放"
+            android:textColor="@color/text_muted"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/text_upload_url"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="18dp"
+            android:background="@drawable/bg_card"
+            android:padding="14dp"
+            android:textColor="@color/accent"
+            android:textSize="15sp" />
+
+        <!-- 屏幕布局 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView style="@style/SectionTitle" android:text="屏幕布局" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_layout0"
+                    style="@style/SegmentButton"
+                    android:text="单屏" />
+
+                <Button
+                    android:id="@+id/btn_layout1"
+                    style="@style/SegmentButton"
+                    android:text="左右分屏" />
+
+                <Button
+                    android:id="@+id/btn_layout2"
+                    style="@style/SegmentButton"
+                    android:text="上下分屏" />
+
+                <Button
+                    android:id="@+id/btn_layout3"
+                    style="@style/SegmentButton"
+                    android:text="四宫格" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="↑ 点上面 4 个按钮选择布局，选中的按钮会变成蓝色"
+                android:textColor="@color/accent"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:id="@+id/row_folder1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+                <TextView style="@style/FieldLabel" android:text="区域 1 素材文件夹" />
+
+                <LinearLayout style="@style/Row">
+                    <TextView android:id="@+id/edit_folder1" style="@style/FolderEdit"
+                    android:gravity="center_vertical"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:hint="点这里选择文件夹" />
+                    <Button android:id="@+id/btn_browse1" style="@style/GhostButton" android:text="浏览" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/row_folder2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+                <TextView style="@style/FieldLabel" android:text="区域 2 素材文件夹" />
+
+                <LinearLayout style="@style/Row">
+                    <TextView android:id="@+id/edit_folder2" style="@style/FolderEdit"
+                    android:gravity="center_vertical"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:hint="点这里选择文件夹" />
+                    <Button android:id="@+id/btn_browse2" style="@style/GhostButton" android:text="浏览" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/row_folder3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+                <TextView style="@style/FieldLabel" android:text="区域 3 素材文件夹" />
+
+                <LinearLayout style="@style/Row">
+                    <TextView android:id="@+id/edit_folder3" style="@style/FolderEdit"
+                    android:gravity="center_vertical"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:hint="点这里选择文件夹" />
+                    <Button android:id="@+id/btn_browse3" style="@style/GhostButton" android:text="浏览" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/row_folder4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+                <TextView style="@style/FieldLabel" android:text="区域 4 素材文件夹" />
+
+                <LinearLayout style="@style/Row">
+                    <TextView android:id="@+id/edit_folder4" style="@style/FolderEdit"
+                    android:gravity="center_vertical"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:hint="点这里选择文件夹" />
+                    <Button android:id="@+id/btn_browse4" style="@style/GhostButton" android:text="浏览" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_layout_hint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="单屏只需要 1 个文件夹"
+                android:textColor="@color/text_muted"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <!-- 播放选项 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView style="@style/SectionTitle" android:text="播放选项" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="每张图片停留秒数"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/edit_seconds"
+                    android:layout_width="100dp"
+                    android:layout_height="44dp"
+                    android:background="@drawable/bg_input"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/check_shuffle"
+                style="@style/ToggleRow"
+                android:text="随机播放顺序：开" />
+
+            <Button
+                android:id="@+id/check_mute"
+                style="@style/ToggleRow"
+                android:text="视频静音：开" />
+
+            <Button
+                android:id="@+id/check_boot"
+                style="@style/ToggleRow"
+                android:text="开机自动启动：开" />
+        </LinearLayout>
+
+        <!-- 循环模式 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView style="@style/SectionTitle" android:text="循环模式" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_mode_list"
+                    style="@style/SegmentButton"
+                    android:layout_weight="1"
+                    android:text="列表循环" />
+
+                <Button
+                    android:id="@+id/btn_mode_single"
+                    style="@style/SegmentButton"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="单文件循环" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="列表循环：播完一个接下一个；单文件循环：只重复当前这个视频/图片"
+                android:textColor="@color/text_muted"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <!-- 定时任务 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView style="@style/SectionTitle" android:text="定时任务（留空表示不启用）" />
+
+            <LinearLayout style="@style/RangeRow">
+                <TextView style="@style/RangeLabel" android:text="每天定时开机（整机开机）" />
+                <TextView android:id="@+id/edit_power_on" style="@style/TimeEdit" android:clickable="true" android:focusable="true"
+                    android:focusableInTouchMode="false" android:hint="点击设置" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/RangeRow">
+                <TextView style="@style/RangeLabel" android:text="每天定时关机（整机断电）" />
+                <TextView android:id="@+id/edit_power_off" style="@style/TimeEdit" android:clickable="true" android:focusable="true"
+                    android:focusableInTouchMode="false" android:hint="点击设置" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/RangeRow">
+                <TextView style="@style/RangeLabel" android:text="每天定时重启" />
+                <TextView android:id="@+id/edit_reboot" style="@style/TimeEdit" android:clickable="true" android:focusable="true"
+                    android:focusableInTouchMode="false" android:hint="点击设置" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/RangeRow">
+                <TextView style="@style/RangeLabel" android:text="软件熄屏时间（不关机）" />
+                <TextView android:id="@+id/edit_screen_off" style="@style/TimeEdit" android:clickable="true" android:focusable="true"
+                    android:focusableInTouchMode="false" android:hint="点击设置" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/RangeRow">
+                <TextView style="@style/RangeLabel" android:text="软件亮屏时间" />
+                <TextView android:id="@+id/edit_screen_on" style="@style/TimeEdit" android:clickable="true" android:focusable="true"
+                    android:focusableInTouchMode="false" android:hint="点击设置" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 守护进程 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView style="@style/SectionTitle" android:text="防退出（守护进程）" />
+
+            <LinearLayout style="@style/RangeRow">
+                <TextView style="@style/RangeLabel" android:text="守护间隔（秒）" />
+                <TextView android:id="@+id/edit_guardian" style="@style/TimeEdit" android:clickable="true" android:focusable="true" android:focusableInTouchMode="false" android:hint="300" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="每这么多秒检查一次播放器是否在前台，不在就拉回来。设大一点就不会频繁抢屏。"
+                android:textColor="@color/text_muted"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <!-- 安全 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView style="@style/SectionTitle" android:text="安全" />
+
+            <LinearLayout style="@style/RangeRow">
+                <TextView style="@style/RangeLabel" android:text="设置页密码（4 位数字）" />
+                <TextView
+                    android:id="@+id/edit_pin"
+                    style="@style/TimeEdit"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="false"
+                    android:hint="点击设置" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/bg_button_primary"
+            android:text="保存并开始播放"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</ScrollView>

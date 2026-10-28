@@ -1,0 +1,61 @@
+name: Bug 报告
+description: 播放、遥控器、上传、转码等功能不正常
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        提交前请确认：**不要贴真实 IP、MAC、序列号、素材内容或其他个人信息**，需要时用 `192.0.2.10` 这类保留地址代替。
+  - type: input
+    id: model
+    attributes:
+      label: 设备型号 / 芯片
+      placeholder: 例如 RK3128 广告机
+    validations:
+      required: true
+  - type: input
+    id: android
+    attributes:
+      label: Android 版本
+      placeholder: 例如 4.4.4 / API 19
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: adplayer 版本
+      placeholder: 设置页顶部显示的版本号
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望结果
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际结果
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: 日志（可选）
+      description: adb logcat -s AdPlayer:* 的输出，注意去掉 IP / MAC
+      render: text
+    validations:
+      required: false
+

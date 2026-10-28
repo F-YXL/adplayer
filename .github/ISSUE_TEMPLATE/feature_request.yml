@@ -1,0 +1,25 @@
+name: 功能建议
+description: 想要的新能力或改进
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: background
+    attributes:
+      label: 使用场景
+      description: 你在什么场景下需要它？（例如：只有一台机器、素材每天要换）
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: 你希望的实现方式
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 考虑过的替代方案
+    validations:
+      required: false
+
